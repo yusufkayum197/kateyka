@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -582,6 +583,35 @@ ul, ol {
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #1A212F;
+}
+
+.otziv {
+  padding: 143px 0;
+}
+.otziv__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.otziv__item {
+  width: 470px;
+  height: 206px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 25px 0px rgba(208, 208, 208, 0.2509803922);
+  background-image: url("../../img/“.svg");
+  background-repeat: no-repeat;
+  background-position: left 20px top 30px;
+  padding: 35px 35px 35px 70px;
+}
+.otziv__title {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
   letter-spacing: 0%;
   vertical-align: middle;
   color: #1A212F;
