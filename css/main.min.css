@@ -6,6 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;800;900&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -349,7 +350,7 @@ ul, ol {
 .container {
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1170px;
+  max-width: 1270px;
 }
 
 .header__container {
@@ -362,6 +363,7 @@ ul, ol {
 }
 .header__list {
   display: flex;
+  justify-content: space-between;
   gap: 30px;
 }
 .header__item a {
@@ -377,6 +379,9 @@ ul, ol {
 .header__item a:hover {
   opacity: 1;
 }
+.header__list__mobile {
+  display: none;
+}
 .header .hamburger__icon {
   display: none;
 }
@@ -388,20 +393,39 @@ ul, ol {
   background-color: transparent;
 }
 
+@media only screen and (max-width: 1430px) {
+  .header__link {
+    display: none;
+  }
+}
 @media only screen and (max-width: 1200px) {
   .header {
-    padding: 0 20px;
+    padding: 0 30px;
+  }
+  .header__mobile {
+    display: none;
   }
 }
 @media only screen and (max-width: 650px) {
+  .header__logo {
+    z-index: 1;
+  }
+  .header__mobile {
+    display: block;
+  }
   .header .hamburger__icon {
     display: block;
+    z-index: 1;
+  }
+  .header .close__icon {
+    display: none;
+    z-index: 1;
   }
   .header .header__list {
     width: 100%;
-    height: 100%;
-    top: 25%;
-    left: 10%;
+    height: 50%;
+    top: 0%;
+    left: 0%;
     display: none;
     position: absolute;
     flex-direction: column;
@@ -409,6 +433,156 @@ ul, ol {
     background-color: #FAC663;
   }
   .header .header__item + .header__item {
-    padding-top: 0px;
+    padding-top: 5%;
   }
+  .header__item {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    vertical-align: middle;
+    opacity: 1;
+    color: #1A212F;
+    padding-top: 22%;
+    padding-left: 5%;
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 590px) {
+  .header__item {
+    padding-top: 28%;
+  }
+}
+.hero {
+  background-image: url("../../img/hero-back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hero__container {
+  padding: 153px 123px;
+}
+.hero__hero__side {
+  max-width: 356px;
+}
+.hero__cnt {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #1A212F;
+}
+.hero__title {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #1A212F;
+}
+.hero__text {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #1A212F;
+  padding-bottom: 40px;
+}
+.hero__side__btn {
+  background-image: url("../../img/paw.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 36px 36px;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #1A212F;
+  background-color: #FFFEFD;
+  border-radius: 25px;
+  border: none;
+  transition: ease-in-out 1s;
+  padding: 18px 63px 18px 18px;
+}
+.hero__side__btn:hover {
+  background-color: #d6cdc4;
+  transition: ease-in-out 1s;
+}
+
+@media only screen and (max-width: 650px) {
+  .hero__container {
+    background-image: url("../../img/hero-tablet.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .hero__side {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+.why-us {
+  padding: 100px 0;
+  background-image: url("../../img/paw (1).svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  z-index: 0;
+}
+.why-us__title {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #1A212F;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 70px;
+}
+.why-us__list {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  gap: 30px;
+}
+.why-us__item {
+  padding: 30px 23px;
+  width: 370px;
+  height: 321px;
+  border-radius: 8px;
+  border-width: 0px, 0px, 0px, 0px;
+  border-style: solid;
+  border-color: #FFFFFF;
+  box-shadow: 0px 0px 25px 0px rgba(208, 208, 208, 0.2509803922);
+  background-color: #FFFFFF;
+}
+.why-us__item__title {
+  width: 309px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #1A212F;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+.why-us__item__text {
+  width: 309px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #1A212F;
 }/*# sourceMappingURL=main.min.css.map */
